@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<center>
+<img id="slide" width="700" height="500">
+</center>
+
+<script>
+
+	var i = 0; 
+	var images = [];
+
+
+	images[0] = '1.jpg';
+	images[1] = '2.jpg';
+	images[2] = '3.jpg';
+
+
+	function changeImg(){
+
+
+		document.getElementById("slide").src = images[i];
+
+		if(i < images.length - 1){
+			i++;
+		} else {
+			i = 0;
+		}
+
+		setTimeout("changeImg()", 500);
+	}
+
+	window.onload = changeImg;
+
+</script>
+
+
+
+</body>
+</html>
